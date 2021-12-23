@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import Product from './Product'
+import Nav from './Nav'
 
 const Products = (props) => {
     const [productTiles,  setProductTiles] = useState(null)
@@ -30,7 +31,10 @@ const Products = (props) => {
     
       return (
         <div>
-          {productTiles}
+            <Nav />
+            <section className="products__grid">
+                {productTiles}
+            </section>
         </div>
       );
 }

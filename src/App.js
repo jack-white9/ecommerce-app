@@ -1,5 +1,8 @@
 import React, { useState } from 'react'
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Products from './components/Products'
+import Home from './components/Home'
+import './App.css'
 
 const App = () => {
   const [state, setState] = useState({
@@ -8,7 +11,12 @@ const App = () => {
   })
 
   return (
-    <Products state={state} setState={setState}/>
+    <BrowserRouter>
+      <Routes>
+        <Route path='/' element={<Home />}/>
+        <Route path='/products' element={<Products state={state} setState={setState}/>}/>
+      </Routes>
+    </BrowserRouter>
   )
 }
 
