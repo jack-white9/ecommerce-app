@@ -25,14 +25,14 @@ const App = () => {
   return (
     <HashRouter basename={process.env.PUBLIC_URL}>
       <Routes>
-        <Route path='https://jack-white9.github.io/ecommerce-app/' element={<Home cart={cart}/>}/>
-        <Route path='https://jack-white9.github.io/ecommerce-app/products' element={<Products 
+        <Route exact path='/' element={<Home cart={cart}/>}/>
+        <Route exact path='/products' element={<Products 
                                             cart={cart} 
                                             setCart={setCart}
                                             products={products}
                                             setProducts={setProducts}
                                             />}/>
-        <Route path='https://jack-white9.github.io/ecommerce-app/cart' element={<Cart 
+        <Route exact path='/cart' element={<Cart 
                                         cart={cart} 
                                         setCart={setCart}
                                         products={products}
