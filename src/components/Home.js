@@ -5,7 +5,9 @@ const Home = () => {
     return (
         <div>
             <Nav />
-            <h1>My Shop</h1>
+            <section className="home__container">
+                <h1 className="home__title">My Shop</h1>
+            </section>
         </div>
     )
 }

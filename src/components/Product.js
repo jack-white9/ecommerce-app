@@ -10,7 +10,12 @@ const Product = (props) => {
             />
             <p className="products__tile--title">{props.title}</p>
             <p>${props.price}</p>
-            <button>Add to cart</button>
+            <button 
+              onClick={() => props.setState({
+                  ...props.state,
+                  cart: props.state.cart.concat(props.product) // change to array of objects with .push()
+              })}
+            >Add to cart</button>
         </figure>
     )
 }

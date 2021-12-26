@@ -17,6 +17,9 @@ const Products = (props) => {
           setProductTiles(props.state.products.map((product) => {
             return (
               <Product 
+                state={props.state}
+                setState={props.setState}
+                product={product}
                 id={product.id}
                 image={product.image}
                 title={product.title}

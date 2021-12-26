@@ -35,6 +35,15 @@ body {
     color: #FFF;
 }
 
+/* HOME */
+
+.home__container {
+    display: flex;
+    height: 100%;
+    justify-content: center;
+}
+
+
 /* PRODUCTS */
 
 .products__grid {
