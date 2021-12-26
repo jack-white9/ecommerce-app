@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react'
-import { Routes, Route, BrowserRouter, HashRouter } from 'react-router-dom';
+import { Switch, Routes, Route, BrowserRouter, HashRouter } from 'react-router-dom';
 import Home from './components/Home'
 import Products from './components/Products'
 import Cart from './components/Cart'
@@ -24,9 +24,9 @@ const App = () => {
   
   // <BrowserRouter> works fine locally, but HashRouter needed for deployment. Doesn't work rn.
   return (
-    <HashRouter>
+    <BrowserRouter basename={`/${process.env.PUBLIC_URL}`}>
       <Routes>
-        <Route exact path='/' element={<Home cart={cart}/>}/>
+        <Route exact path='' element={<Home cart={cart}/>}/>
         <Route exact path='/products' element={<Products 
                                             cart={cart} 
                                             setCart={setCart}
@@ -39,7 +39,7 @@ const App = () => {
                                         products={products}
                                         setProducts={setProducts}/>}/>
       </Routes>
-    </HashRouter>
+    </BrowserRouter>
   )
 }
 
