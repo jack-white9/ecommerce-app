@@ -21,9 +21,10 @@ const App = () => {
       localStorage.setItem('cart', JSON.stringify(cart))
     }
   }, [cart])
-
+  
+  // <BrowserRouter> works fine locally, but HashRouter needed for deployment. Doesn't work rn.
   return (
-    <HashRouter basename={process.env.PUBLIC_URL}>
+    <BrowserRouter basename='/ecommerce-app'>
       <Routes>
         <Route exact path='/' element={<Home cart={cart}/>}/>
         <Route exact path='/products' element={<Products 
@@ -38,7 +39,7 @@ const App = () => {
                                         products={products}
                                         setProducts={setProducts}/>}/>
       </Routes>
-    </HashRouter>
+    </BrowserRouter>
   )
 }
 
