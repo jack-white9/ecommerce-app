@@ -8,17 +8,17 @@ const Products = (props) => {
     useEffect(() => {
         fetch('https://fakestoreapi.com/products')
         .then(res => res.json())
-        .then(json => props.setState({...props.state, products: json}))
-        .then(() => console.log(props.state))
+        .then(json => props.setProducts(json))
       }, [])
     
       useEffect(() => {
-        if (props.state.products) {
-          setProductTiles(props.state.products.map((product) => {
+        console.log(props.products)
+        if (props.products) {
+          setProductTiles(props.products.map((product) => {
             return (
               <Product 
-                state={props.state}
-                setState={props.setState}
+                cart={props.cart}
+                setCart={props.setCart}
                 product={product}
                 id={product.id}
                 image={product.image}
@@ -29,8 +29,7 @@ const Products = (props) => {
             )
           })
         )}
-      }, [props.state.products])
-    
+      }, [props.products])
     
       return (
         <div>

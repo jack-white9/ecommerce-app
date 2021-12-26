@@ -6,19 +6,27 @@ import Cart from './components/Cart'
 import './App.css'
 
 const App = () => {
-  const [state, setState] = useState({
-    cart: [],
-    products: ''
-  })
+  const [cart, setCart] = useState([])
+  const [products, setProducts] = useState('')
 
-  useEffect(() => console.log(state), [state])
+  useEffect(() => console.log(cart), [cart])
+  useEffect(() => console.log(products), [products])
 
   return (
     <BrowserRouter>
       <Routes>
         <Route path='/' element={<Home />}/>
-        <Route path='/products' element={<Products state={state} setState={setState}/>}/>
-        <Route path='/cart' element={<Cart state={state} setState={setState}/>}/>
+        <Route path='/products' element={<Products 
+                                            cart={cart} 
+                                            setCart={setCart}
+                                            products={products}
+                                            setProducts={setProducts}
+                                            />}/>
+        <Route path='/cart' element={<Cart 
+                                        cart={cart} 
+                                        setCart={setCart}
+                                        products={products}
+                                        setProducts={setProducts}/>}/>
       </Routes>
     </BrowserRouter>
   )
