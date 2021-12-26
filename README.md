@@ -19,6 +19,9 @@ FindMovies was built with:
 ## Roadmap
 - [ ] Convert home page into row-based style
 - [ ] Fix colour palette of buttons in product and cart page
+- [ ] Add <Link> to Eco-Store logo
+- [ ] Change cart to cart icon
+- [ ] Display number of items in cart on navbar
 - [ ] Anchor the position of price and cart button on products page
 - [ ] Create indication that product has been added to cart
 - [ ] Add mobile responsiveness
