@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react'
+import uniqid from 'uniqid'
 import Nav from './Nav'
 import CartItem from './CartItem'
 
@@ -9,7 +10,7 @@ const Cart = (props) => {
         setCartItems(props.cart.map((product) => {
         return (
             <CartItem 
-              key={product.id}
+              key={uniqid()}
               cart={props.cart}
               setCart={props.setCart}
               product={product}
