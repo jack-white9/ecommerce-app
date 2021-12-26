@@ -24,11 +24,14 @@ const Cart = (props) => {
         })
     )}, [props.cart])
 
+    const totalPrice = props.cart.reduce((total, item) => total + item.price, 0)
+
     return (
         <div>
             <Nav />
             <section className="cart__container">
                 {cartItems}
+                <p><strong>Total Price: </strong>${totalPrice}</p>
             </section>
         </div>
     )
