@@ -23,22 +23,22 @@ const App = () => {
   }, [cart])
 
   return (
-    <BrowserRouter basename={process.env.PUBLIC_URL}>
+    <HashRouter basename={process.env.PUBLIC_URL}>
       <Routes>
-        <Route path='/' element={<Home cart={cart}/>}/>
-        <Route path='/products' element={<Products 
+        <Route path='https://jack-white9.github.io/ecommerce-app/' element={<Home cart={cart}/>}/>
+        <Route path='https://jack-white9.github.io/ecommerce-app/products' element={<Products 
                                             cart={cart} 
                                             setCart={setCart}
                                             products={products}
                                             setProducts={setProducts}
                                             />}/>
-        <Route path='/cart' element={<Cart 
+        <Route path='https://jack-white9.github.io/ecommerce-app/cart' element={<Cart 
                                         cart={cart} 
                                         setCart={setCart}
                                         products={products}
                                         setProducts={setProducts}/>}/>
       </Routes>
-    </BrowserRouter>
+    </HashRouter>
   )
 }
 
