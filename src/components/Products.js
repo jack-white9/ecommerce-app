@@ -17,6 +17,7 @@ const Products = (props) => {
           setProductTiles(props.products.map((product) => {
             return (
               <Product 
+                key={product.id}
                 cart={props.cart}
                 setCart={props.setCart}
                 product={product}

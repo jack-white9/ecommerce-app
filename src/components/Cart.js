@@ -2,10 +2,10 @@ import React from 'react'
 import Nav from './Nav'
 
 const Cart = (props) => {
+    console.log(props.cart)
     return (
         <div>
             <Nav />
-            <p>{props.state.cart ? props.state.cart : 'NOTHING HERE'}</p>
         </div>
     )
 }

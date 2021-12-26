@@ -9,6 +9,19 @@ const App = () => {
   const [cart, setCart] = useState([])
   const [products, setProducts] = useState('')
 
+  useEffect(() => {
+    const retreiveCart = JSON.parse(localStorage.getItem('cart'))
+    if (retreiveCart) {
+      setCart(retreiveCart)
+    }
+  }, [])
+
+  useEffect(() => {
+    if (cart) {
+      localStorage.setItem('cart', JSON.stringify(cart))
+    }
+  }, [cart])
+
   useEffect(() => console.log(cart), [cart])
   useEffect(() => console.log(products), [products])
 
