@@ -25,8 +25,8 @@ FindMovies was built with:
 - [x] Anchor the position of price and cart button on products page
 - [x] Create indication that product has been added to cart
 - [x] Add loading screen for product page
+- [x] Add mobile responsiveness
 - [ ] Add z-index:1 absolute position top0 right0 notification for added item
-- [ ] Add mobile responsiveness
 - [ ] Fix weird cart removal behaviour
 
 ## License
