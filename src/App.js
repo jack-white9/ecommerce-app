@@ -22,9 +22,6 @@ const App = () => {
     }
   }, [cart])
 
-  useEffect(() => console.log(cart), [cart])
-  useEffect(() => console.log(products), [products])
-
   return (
     <BrowserRouter>
       <Routes>
