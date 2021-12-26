@@ -28,7 +28,7 @@ const Cart = (props) => {
 
     return (
         <div>
-            <Nav />
+            <Nav cart={props.cart} />
             <section className="cart__container">
                 <div className="cart__header">
                     <p>YOUR CART</p>

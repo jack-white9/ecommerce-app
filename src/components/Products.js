@@ -34,8 +34,9 @@ const Products = (props) => {
     
       return (
         <div className="products__container">
-            <Nav />
+            <Nav cart={props.cart} />
             <h1 className="products__header">OUR PRODUCTS</h1>
+            <h2 className="products__loading">{props.products ? null : 'Loading...'}</h2>
             <section className="products__grid">
                 {productTiles}
             </section>

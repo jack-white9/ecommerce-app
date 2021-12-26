@@ -23,14 +23,18 @@ body {
 }
 
 .navbar__logo {
-    font-size: 24px;
+    font-size: 36px;
+    font-weight: 300;
     color: #FFF;
+    text-decoration: none;
 }
 
 .navbar__links {
     display: flex;
-    gap: 30px;
+    gap: 76px;
     list-style: none;
+    font-size: 30px;
+    font-weight: 300;
 }
 
 .navbar__links--link {
@@ -38,14 +42,57 @@ body {
     color: #FFF;
 }
 
+.navbar__links--link:hover {
+    opacity: 0.7;
+}
+
+@media (max-width: 768px) {
+    .navbar__logo, .navbar__links--link {
+        font-size: 24px;
+    }
+
+    .navbar__home {
+        display: none;
+        width: 0;
+    }
+}
+
+@media (max-width: 480px) {
+    .navbar {
+        padding: 20px 30px;
+    }
+
+    .navbar__products {
+        display: none;
+        width: 0;
+    }
+
+    .navbar__links {
+        gap: 10px;
+    }
+
+    .navbar__links--link {
+        font-size: 20px;
+    }
+}
+
+
 /* HOME */
 
 .home__container {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
-    justify-content: space-evenly;
-    height: 90vh; /* THIS IS KINDA SKETCHY */
+    height: 80vh;
+    width: 80%;
+    margin: 0 auto;
+}
+
+.home__container--left {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 30px;
 }
 
 .home__title {
@@ -70,6 +117,39 @@ body {
     cursor: pointer;
 }
 
+@media (max-width: 1400px) {
+    .home__image {
+        max-width: 500px;
+        width: auto;
+        height: auto;
+    }
+}
+
+/* Small phones, tablets, large smartphones */
+@media (max-width: 768px) {
+    .home__container {
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+        height: 90vh;
+    }
+
+    .home__image {
+        max-width: 400px;
+        width: auto;
+        height: auto;
+    }
+    
+}
+
+/* Small phones */
+@media (max-width: 480px) {
+    .home__image {
+        max-width: 350px;
+        width: auto;
+        height: auto;
+    }
+}
 
 /* PRODUCTS */
 
@@ -81,6 +161,12 @@ body {
 .products__header {
     text-align: center;
     padding-top: 50px;
+    font-weight: 300;
+}
+
+.products__loading {
+    text-align: center;
+    font-weight: 300;
 }
 
 .products__grid {
@@ -101,12 +187,20 @@ body {
     height: 500px;
     background-color: #FFF;
     box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    position: relative;
 }
 
 .products__tile--title {
     text-align: center;
     font-size: 20px;
     max-width: 80%;
+    position: absolute;
+    bottom: 100px;
+}
+
+.products__tile--price {
+    position: absolute;
+    bottom: 75px;
 }
 
 .products__tile--image {
@@ -114,17 +208,26 @@ body {
     max-width: 200px;
     width: auto;
     height: auto;
+    position: absolute;
+    top: 20px;
 }
 
 .products__tile--button {
-    background-color: lightgreen;
+    background-color: #a5a58d;
     border: 0;
     padding: 10px 20px;
+    position: absolute;
+    bottom: 30px;
 }
 
 .products__tile--button:hover {
     opacity: 0.95;
     cursor: pointer;
+}
+
+.products__tile--button:active {
+    transition: all 50ms ease;
+    background-color: #6e6e5e;
 }
 
 /* CART */
@@ -187,7 +290,7 @@ body {
 }
 
 .cart__item--remove {
-    background-color: lightcoral;
+    background-color: #cb997e;
     border: 0;
     padding: 10px 20px;
 }
@@ -210,7 +313,7 @@ body {
 }
 
 .cart__checkout {
-    background-color: lightgreen;
+    background-color: #cb997e;
     border: 0;
     padding: 10px 20px;
 }
@@ -218,4 +321,31 @@ body {
 .cart__checkout:hover {
     opacity: 0.95;
     cursor: pointer;
+}
+
+@media (max-width: 850px) {
+    .cart__header, .cart__item--container, .cart__footer {
+        width: 600px;
+    }
+}
+
+@media (max-width: 630px) {
+    .cart__header, .cart__item--container, .cart__footer {
+        width: 450px;
+    }
+}
+
+@media (max-width: 480px) {
+    .cart__header, .cart__item--container, .cart__footer {
+        width: 350px;
+    }
+
+    .cart__item--container {
+        flex-direction: column;
+        justify-content: center;
+        gap: 30px;
+        height: 100%;
+        padding-top: 20px;
+        padding-bottom: 10px;
+    }
 }
