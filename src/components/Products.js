@@ -33,8 +33,9 @@ const Products = (props) => {
       }, [props.products])
     
       return (
-        <div>
+        <div className="products__container">
             <Nav />
+            <h1 className="products__header">OUR PRODUCTS</h1>
             <section className="products__grid">
                 {productTiles}
             </section>

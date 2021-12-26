@@ -30,8 +30,14 @@ const Cart = (props) => {
         <div>
             <Nav />
             <section className="cart__container">
+                <div className="cart__header">
+                    <p>YOUR CART</p>
+                </div>
                 {cartItems}
-                <p><strong>Total Price: </strong>${totalPrice}</p>
+                <div className="cart__footer">
+                    <p><strong>Total Price: </strong>${totalPrice.toFixed(2)}</p>
+                    <button className="cart__checkout">CHECKOUT</button>
+                </div>
             </section>
         </div>
     )

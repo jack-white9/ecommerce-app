@@ -9,12 +9,14 @@ const CartItem = (props) => {
 
     return (
         <section className="cart__item--container">
-            <img src={props.image} alt={props.title} className="cart__item--image" />
-            <section className="cart__item--details">
-                <p>{props.title}</p>
-                <p>${props.price}</p>
+            <section className="cart__item--information">
+                <img src={props.image} alt={props.title} className="cart__item--image" />
+                <section className="cart__item--details">
+                    <p className="cart__item--name">{props.title}</p>
+                    <button onClick={() => removeItem(props.id)} className="cart__item--remove">Remove</button>
+                </section>
             </section>
-            <button onClick={() => removeItem(props.id)}>Remove</button>
+            <p className="cart__item--price">${props.price.toFixed(2)}</p>
         </section>
     )
 }
