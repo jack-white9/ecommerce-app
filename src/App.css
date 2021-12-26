@@ -42,8 +42,32 @@ body {
 
 .home__container {
     display: flex;
-    height: 100%;
-    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    height: 90vh; /* THIS IS KINDA SKETCHY */
+}
+
+.home__title {
+    font-size: 48px;
+    font-weight: 400;
+}
+
+.home__subtitle {
+    font-size: 30px;
+}
+
+.home__button {
+    background-color: #a5a58d;
+    border: 0;
+    padding: 10px 20px;
+    text-decoration: none;
+    color: #000;
+}
+
+.home__button:hover {
+    opacity: 0.95;
+    cursor: pointer;
 }
 
 
