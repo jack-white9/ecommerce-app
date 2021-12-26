@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react'
-import { HashRouter, Routes, Route } from 'react-router-dom';
+import { Routes, Route, BrowserRouter } from 'react-router-dom';
 import Home from './components/Home'
 import Products from './components/Products'
 import Cart from './components/Cart'
@@ -23,22 +23,20 @@ const App = () => {
   }, [cart])
 
   return (
-    <HashRouter>
-      <Routes>
-        <Route path='/' element={<Home cart={cart}/>}/>
-        <Route path='/products' element={<Products 
-                                            cart={cart} 
-                                            setCart={setCart}
-                                            products={products}
-                                            setProducts={setProducts}
-                                            />}/>
-        <Route path='/cart' element={<Cart 
-                                        cart={cart} 
-                                        setCart={setCart}
-                                        products={products}
-                                        setProducts={setProducts}/>}/>
-      </Routes>
-    </HashRouter>
+    <Routes>
+      <Route path='/' element={<Home cart={cart}/>}/>
+      <Route path='/products' element={<Products 
+                                          cart={cart} 
+                                          setCart={setCart}
+                                          products={products}
+                                          setProducts={setProducts}
+                                          />}/>
+      <Route path='/cart' element={<Cart 
+                                      cart={cart} 
+                                      setCart={setCart}
+                                      products={products}
+                                      setProducts={setProducts}/>}/>
+    </Routes>
   )
 }
 
