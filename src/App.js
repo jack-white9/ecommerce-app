@@ -22,18 +22,17 @@ const App = () => {
     }
   }, [cart])
   
-  // <BrowserRouter> works fine locally, but HashRouter needed for deployment. Doesn't work rn.
   return (
-    <BrowserRouter basename="/ecommerce-app">
+    <BrowserRouter>
       <Routes>
-        <Route path='ecommerce-app/' element={<Home cart={cart}/>}/>
-        <Route path='ecommerce-app/products' element={<Products 
+        <Route path='/' element={<Home cart={cart}/>}/>
+        <Route path='/products' element={<Products 
                                             cart={cart} 
                                             setCart={setCart}
                                             products={products}
                                             setProducts={setProducts}
                                             />}/>
-        <Route path='ecommerce-app/cart' element={<Cart 
+        <Route path='/cart' element={<Cart 
                                         cart={cart} 
                                         setCart={setCart}
                                         products={products}
