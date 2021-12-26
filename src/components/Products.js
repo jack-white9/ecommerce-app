@@ -3,7 +3,7 @@ import Product from './Product'
 import Nav from './Nav'
 
 const Products = (props) => {
-    const [productTiles,  setProductTiles] = useState(null)
+    const [productTiles, setProductTiles] = useState(null)
 
     useEffect(() => {
         fetch('https://fakestoreapi.com/products')
