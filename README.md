@@ -5,9 +5,9 @@
 Eco-Store is an e-commerce web application created with React. Users can explore a range of products fetched from a fake store API and add them to their shopping cart. The project features a responsive design that works seamlessly for users of all screen sizes, including desktop users, tablet users, and mobile users.
 
 Features:
-* Shopping cart stored across sessions using localStorage
-* React Router for rendering different URLs
-* 
+* Shopping cart stored across sessions using React and localStorage
+* React Routing for rendering different URLs
+* Responsive UI design across different screen sizes
 
 ## Built With
 FindMovies was built with:
