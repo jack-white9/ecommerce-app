@@ -1,5 +1,5 @@
 # Eco-Store
-[See the live demo here](https://eco-store-ecommerce-app.herokuapp.com/ecommerce-app/products)
+[See the live demo here](https://eco-store-ecommerce-app.herokuapp.com/ecommerce-app/)
 
 ## About the Project
 Eco-Store is an e-commerce web application created with React. Users can explore a range of products fetched from a fake store API and add them to their shopping cart. The project features a responsive design that works seamlessly for users of all screen sizes, including desktop users, tablet users, and mobile users.
