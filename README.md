@@ -10,7 +10,7 @@ Features:
 * Responsive UI design across different screen sizes
 
 ## Built With
-FindMovies was built with:
+Eco-Store was built with:
 * React.js
 * JavaScript
 * HTML5
