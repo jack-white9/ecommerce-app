@@ -23,7 +23,7 @@ const App = () => {
   }, [cart])
   
   return (
-    <BrowserRouter>
+    <BrowserRouter basename="/ecommerce-app/">
       <Routes>
         <Route path='/' element={<Home cart={cart}/>}/>
         <Route path='/products' element={<Products 
